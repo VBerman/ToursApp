@@ -32,7 +32,7 @@ namespace ToursApp.Database
         public decimal Price { get; set; }
 
         public bool IsActual { get; set; }
-        //"prop"+tab+tab
+        //"prop"+tabs
         public ActualInfo ActualInfo
         {
             get 
