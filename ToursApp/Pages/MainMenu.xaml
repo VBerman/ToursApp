@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel VerticalAlignment="Center">
-            <Button Content="Список отелей"/>
+            <Button Content="Список отелей" Click="Open_Hotel_List"/>
             <Button Content="Список туров" Click="Button_Click"/>
         </StackPanel>
         <!--ctrl+d-->

@@ -34,20 +34,46 @@ namespace ToursApp
             //App._context.Countries.ToList().FirstOrDefault().Name;
             //var listTours = App._context.Tours.ToList();
             // alt+enter+enter
+
+            //Получаем информацию о папке
             var d = new DirectoryInfo(@"C:\Users\br_mn\Desktop\Туры фото");
+            //Получаем фотографии (все кроме данных)
             var photos = d.GetFiles();
+            //Проходимся по каждой из фотографий
             foreach (var photo in photos)
             {
+                //Читаем данные фотографии
                 var dataPhoto = File.ReadAllBytes(photo.FullName);
+                //Получаем имя фотографии без расшширения
                 var namePhoto = System.IO.Path.GetFileNameWithoutExtension(photo.FullName);
-                //Получаем тур и затем записываем в него данные фотографии
+                //Получаем тур
                 var tour = App._context.Tours.Where(t => t.Name == namePhoto).FirstOrDefault();
+                // и затем записываем в него данные фотографии
                 tour.ImagePreview = dataPhoto;
+                //Сохраняем бд
                 App._context.SaveChanges();
 
             }
         }
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+                
+        }
+
+        private void Forward_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoForward)
+            {
+                MainFrame.GoForward();
+            }
+            
+        }
 
 
-    }
+
+        }
 }

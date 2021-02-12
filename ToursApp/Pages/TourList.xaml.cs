@@ -30,6 +30,7 @@ namespace ToursApp.Pages
             
             InitializeComponent();
             Tours = new ObservableCollection<Tour>(App._context.Tours.ToList());
+            
             Types.Add("Все типы");
             foreach (var item in App._context.Types.ToList())
             {

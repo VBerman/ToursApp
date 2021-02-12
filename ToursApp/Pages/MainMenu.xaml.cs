@@ -29,5 +29,10 @@ namespace ToursApp.Pages
         {
             NavigationService.Navigate(new TourList());
         }
+
+        private void Open_Hotel_List(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new HotelList());
+        }
     }
 }

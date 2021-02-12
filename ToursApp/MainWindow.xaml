@@ -26,8 +26,10 @@
             <TextBlock Text="Путешествуй по России!" VerticalAlignment="Center" Margin="5 0 0 0"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Width="30" Height="30" Content="←" Foreground="#e31e24" BorderBrush="{x:Null}" />
-            <Button Width="30" Height="30" Content="→" Foreground="#e31e24" BorderBrush="{x:Null}"/>
+            <Button Width="30" Height="30" Content="←" Foreground="#e31e24" BorderBrush="#FF878787" Click="Back_Click"/>
+            <Button Width="30" Height="30" Content="→" Foreground="#e31e24" BorderBrush="{x:Null}" Click="Forward_Click"/>
+            <Button/>
+         
         </StackPanel>
         <!--F7-->
         <Frame x:Name="MainFrame" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>

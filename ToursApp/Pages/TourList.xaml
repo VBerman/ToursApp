@@ -20,10 +20,10 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="8.5*"/>
         </Grid.RowDefinitions>
-        <TextBlock VerticalAlignment="Center" TextAlignment="Right" Grid.Row="0" Grid.Column="0" Text="Введите текст для поиска: "/>
-        <TextBox TextChanged="Refresh" VerticalAlignment="Center" x:Name="SearchString" HorizontalAlignment="Left" Grid.Row="0" Width="250" Grid.Column="1"/>
-        
-        <TextBlock VerticalAlignment="Center" TextAlignment="Right" Grid.Row="1" Grid.Column="0" Text="Выберите тип: "/>
+        <TextBlock HorizontalAlignment="Right" TextAlignment="Right" Grid.Row="0" Grid.Column="0" Text="Введите текст для поиска: "/>
+        <TextBox Height="20" TextChanged="Refresh" VerticalAlignment="Center" x:Name="SearchString" HorizontalAlignment="Left" Grid.Row="0" Width="250" Grid.Column="1"/>
+
+        <TextBlock HorizontalAlignment="Right" TextAlignment="Right" Grid.Row="1" Grid.Column="0" Text="Выберите тип: "/>
         <ComboBox  SelectionChanged="Refresh"  SelectedItem="Все типы"  VerticalAlignment="Center" x:Name="SelectedType" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Width="250"/>
         
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
@@ -33,7 +33,7 @@
             
         </StackPanel>
         
-        <TextBlock Text="Общая стоимость туров: " Margin="5 0 0 0"  VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Text="Общая стоимость туров: " Margin="5 0 0 0"  VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
 
         <ListView x:Name="ListViewTour" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center">
             <ListView.ItemsPanel>
@@ -45,7 +45,7 @@
         
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="400" Margin="10 0 10 0">
+                    <Grid Width="400" Margin="10 0 10 0" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>

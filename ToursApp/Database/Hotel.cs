@@ -5,6 +5,7 @@ namespace ToursApp.Database
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("Hotel")]
     public partial class Hotel
@@ -41,5 +42,14 @@ namespace ToursApp.Database
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tour> Tours { get; set; }
+
+        public int CountTour { 
+            //Гет для получения данных
+            get
+            {
+                return Tours.Where(t=>t.IsActual).Count();
+            }
+
+        }
     }
 }
